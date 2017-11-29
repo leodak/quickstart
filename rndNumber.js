@@ -1,4 +1,4 @@
-$( "#rndNumber" ).blur(function() {
+function HighlightCell(){
   var trArray = Array.from($("#tblRandomNumber tr td"));
 var rndNumber = $("#rndNumber").val();
 trArray.map(function(a){
@@ -9,4 +9,11 @@ trArray.map(function(a){
     $(a).css("background-color","#fff");
   }
 });
+}
+$( "#rndNumber" ).blur(function() {
+  HighlightCell();
+});
+
+$("#highlightCell").click(function(){
+  HighlightCell();
 });
